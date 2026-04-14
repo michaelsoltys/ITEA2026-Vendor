@@ -24,7 +24,7 @@ Sam Bright · William Emeny · Alan Jaeger · Adam Larson · JP Lueck · Michael
 GBL Systems Corp. · NSWC Port Hueneme Division
 
 <!--
-William opens. Welcome everyone. We're William Emeny and Michael Soltys, and we're here to talk about a problem that affects every naval organization procuring AI and ML systems: vendor lock-in. William will frame the problem — what vendor lock-in is, how it has evolved, and why today's AI systems make it worse. Then Michael will present solutions — policy, technical strategies, and five concrete things you can put into your next solicitation.
+Sam opens. Welcome everyone. We're Sam Bright and Michael Soltys, and we're here to talk about a problem that affects every naval organization procuring AI and ML systems: vendor lock-in. Sam will frame the problem — what vendor lock-in is, how it has evolved, and why today's AI systems make it worse. Then Michael will present solutions — policy, technical strategies, and five concrete things you can put into your next solicitation.
 -->
 
 ---
@@ -59,7 +59,7 @@ William opens. Welcome everyone. We're William Emeny and Michael Soltys, and we'
 "What begins as a useful tool can become an iron cage of constraint." — Max Weber
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">WE</div>
+<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 <!--
 Let me start by defining what we mean by vendor lock-in in the context of our paper. At its core, it's about switching costs becoming so high that you're effectively trapped. For defense AI, the stakes are uniquely high — we're talking about technological sovereignty, competition for taxpayer dollars, and the ability to adapt our systems as threats change. Weber's iron cage metaphor captures it well: the tools we adopt for capability can become the constraints that limit us.
@@ -101,7 +101,7 @@ For defense AI — classified data, mission-critical uptime, proprietary model w
 If commodity software costs $112M to escape, what does defense AI lock-in cost?
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">WE</div>
+<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 <!--
 This is the case study that makes the risk concrete. The USDA — a civilian agency dealing with commodity office software — found that switching would cost MORE than the $112 million premium they were already paying. Retraining, converting workflows, rebuilding integrations. And that's just email and documents. Now imagine defense AI systems with classified training data, real-time inference for weapon systems, and FedRAMP security controls. The switching costs are orders of magnitude higher.
@@ -125,7 +125,7 @@ How Has Lock-In Presented Itself in Past Architectures?
 Each technology wave created new opportunities for vendors to establish proprietary dominance
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">WE</div>
+<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 <!--
 Vendor lock-in isn't new — it has been a recurring pattern across every major technology transition. In the mainframe era, you were locked to IBM's hardware and software. Client-server brought Microsoft and Oracle dominance through proprietary protocols. Enterprise software like SAP created lock-in through deep customization. Cloud computing repeated the pattern — but here's a key insight: lock-in is a spectrum, not binary. In web design there's a concept called "stickiness" — pages designed to keep users coming back. Managed cloud services are sticky in the negative, spiderweb sense. Running your application as a container on an EC2 instance? No big deal to migrate. Building your application around Azure Functions? Good luck shifting that to Google Cloud. Generic services like Linux VMs and object storage are low on the lock-in spectrum; managed services like Lambda and Azure Functions are high. The question is: where does AI fall on that spectrum?
@@ -166,7 +166,7 @@ Key Vulnerabilities in Modern AI Architectures
 Unlike previous waves, AI lock-in extends into models themselves — not just infrastructure
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">WE</div>
+<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 <!--
 Continuing the spectrum idea: what makes AI lock-in fundamentally different is that it pushes you toward the sticky end at every stage of the development process — not just deployment. Previous lock-in was about interfaces, APIs, file formats — things you encountered at the infrastructure layer. AI lock-in goes deeper, into the models themselves — into intellectual property and algorithmic competence. A model trained on a proprietary platform may literally not work the same way when you move it. And lock-in accumulates across the entire pipeline: you pick a vendor's data storage, then their training environment, then their serving infrastructure, then their monitoring tools. Each choice is individually reasonable, but collectively they move you further along the lock-in spectrum until switching becomes prohibitively expensive. Every major cloud provider has built comprehensive AI ecosystems designed to work beautifully together — but only within their own platform.
@@ -176,9 +176,9 @@ Continuing the spectrum idea: what makes AI lock-in fundamentally different is t
 
 # Four Types of AI Vendor Lock-In
 
-<div class="grid grid-cols-2 gap-4 mt-6">
+<div class="grid grid-cols-2 gap-3 mt-4">
 
-<div class="border-2 border-blue-500 p-4 rounded">
+<div class="border-2 border-blue-500 p-3 rounded">
 
 ### <span style="color: #6b21a8;">Platform Lock-In</span>
 
@@ -186,7 +186,7 @@ Training, inference, and deployment tied to a specific cloud ecosystem (Azure Op
 
 </div>
 
-<div class="border-2 border-yellow-500 p-4 rounded">
+<div class="border-2 border-yellow-500 p-3 rounded">
 
 ### <span style="color: #6b21a8;">Data Lock-In</span>
 
@@ -194,7 +194,7 @@ Training datasets and preprocessing pipelines optimized for vendor-specific form
 
 </div>
 
-<div class="border-2 border-green-500 p-4 rounded">
+<div class="border-2 border-green-500 p-3 rounded">
 
 ### <span style="color: #6b21a8;">Model Lock-In</span>
 
@@ -202,7 +202,7 @@ Models dependent on proprietary frameworks, custom accelerators, or vendor-speci
 
 </div>
 
-<div class="border-2 border-red-500 p-4 rounded">
+<div class="border-2 border-red-500 p-3 rounded">
 
 ### <span style="color: #6b21a8;">Expertise Lock-In</span>
 
@@ -212,14 +212,14 @@ Teams specialized in vendor-specific tools and APIs; organizational inertia rein
 
 </div>
 
-<div class="bg-blue-100 dark:bg-blue-900 p-4 rounded mt-4 text-center text-xl">
+<div class="bg-blue-100 dark:bg-blue-900 p-2 rounded mt-2 text-center text-sm">
 These four types compound each other — together, they create lock-in
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">WE</div>
+<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 <!--
-In our paper we identify four distinct types of AI vendor lock-in, and they compound each other. Platform lock-in is the most visible — your whole pipeline depends on one cloud. Data lock-in is often more insidious — your training data is structured around vendor-specific storage. Model lock-in means your trained models can't easily move. And expertise lock-in means your people only know one vendor's tools. Each alone creates friction; together, they create a trap. I'll now hand it over to Michael to discuss the solutions.
+In our paper we identify four distinct types of AI vendor lock-in, and they compound each other. Platform lock-in is the most visible — your whole pipeline depends on one cloud. Data lock-in is often more insidious — your training data is structured around vendor-specific storage. Model lock-in means your trained models can't easily move. And expertise lock-in means your people only know one vendor's tools. Each alone creates friction; together, they create a trap.
 -->
 
 ---
@@ -244,7 +244,7 @@ In our paper we identify four distinct types of AI vendor lock-in, and they comp
 Good news: CDAO has already proven vendor-agnostic approaches work at DoW scale
 </div>
 
-<div class="abs-br m-6 text-sm opacity-50 font-bold">WE</div>
+<div class="abs-br m-6 text-sm opacity-50 font-bold">SB</div>
 
 <!--
 The defense environment makes all four types of lock-in worse. Classification limits your ability to evaluate alternatives. Clearances shrink the vendor pool. Mission-critical reliability makes everyone risk-averse. And long procurement cycles mean decisions made years ago still constrain you today. Even the DoW's own open source memo acknowledges that lock-in can happen with open-source software.
@@ -293,16 +293,16 @@ November 7, 2025 — Secretary Hegseth, National War College
 <div class="abs-br m-6 text-sm opacity-50 font-bold">MS</div>
 
 <!--
-Thanks William. So now that we understand the problem, what's being done about it? In November 2025, Secretary Hegseth made vendor lock-in avoidance a mandatory structural requirement — not just a nice-to-have. The key is requirement number three: maintain at least two qualified sources for critical program content. The new PAE structure ties executive compensation to competition and speed. This means the strategies I'm about to discuss aren't optional — they're what the policy now demands.
+Thanks Sam. So now that we understand the problem, what's being done about it? In November 2025, Secretary Hegseth made vendor lock-in avoidance a mandatory structural requirement — not just a nice-to-have. The key is requirement number three: maintain at least two qualified sources for critical program content. The new PAE structure ties executive compensation to competition and speed. This means the strategies I'm about to discuss aren't optional — they're what the policy now demands.
 -->
 
 ---
 
 # Technical Strategies for Platform Independence
 
-<div class="grid grid-cols-3 gap-4 mt-6">
+<div class="grid grid-cols-3 gap-3 mt-4">
 
-<div class="border-2 border-blue-500 p-4 rounded">
+<div class="border-2 border-blue-500 p-3 rounded">
 
 ### <span style="color: #6b21a8;">Containerization</span>
 
@@ -313,7 +313,7 @@ Thanks William. So now that we understand the problem, what's being done about i
 
 </div>
 
-<div class="border-2 border-yellow-500 p-4 rounded">
+<div class="border-2 border-yellow-500 p-3 rounded">
 
 ### <span style="color: #6b21a8;">Open Standards</span>
 
@@ -323,7 +323,7 @@ Thanks William. So now that we understand the problem, what's being done about i
 
 </div>
 
-<div class="border-2 border-green-500 p-4 rounded">
+<div class="border-2 border-green-500 p-3 rounded">
 
 ### <span style="color: #6b21a8;">Infrastructure-as-Code</span>
 
@@ -335,7 +335,7 @@ Thanks William. So now that we understand the problem, what's being done about i
 
 </div>
 
-<div class="bg-blue-100 dark:bg-blue-900 p-4 rounded mt-6 text-center text-xl">
+<div class="bg-blue-100 dark:bg-blue-900 p-3 rounded mt-4 text-center text-base">
 These are mature, production-ready technologies — not research projects
 </div>
 
