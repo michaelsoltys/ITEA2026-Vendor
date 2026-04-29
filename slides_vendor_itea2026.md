@@ -435,7 +435,7 @@ This is the slide I want you to remember. If you take nothing else away from thi
 </div>
 
 <div class="border-l-4 border-red-500 pl-3 py-1 mb-2">
-<strong>5. <T4L>Demonstrated Portability</T4L></strong> — Must deploy and pass tests on at least two environments
+<strong>5. Demonstrated Portability</strong> — Must deploy and pass tests on at least two environments
 </div>
 
 <div class="abs-br m-6 text-sm opacity-50 font-bold">MS</div>
