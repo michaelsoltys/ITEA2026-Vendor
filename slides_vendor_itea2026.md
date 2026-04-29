@@ -23,6 +23,10 @@ Sam Bright · William Emeny · Alan Jaeger · Adam Larson · JP Lueck · Michael
 
 GBL Systems Corp. · NSWC Port Hueneme Division
 
+ITEA Test Instrumentation Workshop · April 28–30, 2026 · Las Vegas, NV
+
+Track 6 · Siena Room · Wed April 29 · 2:30–3:00 PM
+
 <!--
 Sam opens. Welcome everyone. We're Sam Bright and Michael Soltys, and we're here to talk about a problem that affects every naval organization procuring AI and ML systems: vendor lock-in. Sam will frame the problem — what vendor lock-in is, how it has evolved, and why today's AI systems make it worse. Then Michael will present solutions — policy, technical strategies, and five concrete things you can put into your next solicitation.
 -->
