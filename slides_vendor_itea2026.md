@@ -79,7 +79,7 @@ Let me start by defining what we mean by vendor lock-in in the context of our pa
 
 ### <span style="color: #6b21a8;">What Happened</span>
 
-Paid **$112 million more** for Microsoft Office than Google Workspace — specifically to avoid even *higher* switching costs.
+Paid <T4L>$112 million more</T4L> for Microsoft Office than Google Workspace — specifically to avoid even *higher* switching costs.
 
 Migrating would have required:
 - Retraining thousands of employees
@@ -435,7 +435,7 @@ This is the slide I want you to remember. If you take nothing else away from thi
 </div>
 
 <div class="border-l-4 border-red-500 pl-3 py-1 mb-2">
-<strong>5. Demonstrated Portability</strong> — Must deploy and pass tests on at least two environments
+<strong>5. <T4L>Demonstrated Portability</T4L></strong> — Must deploy and pass tests on at least two environments
 </div>
 
 <div class="abs-br m-6 text-sm opacity-50 font-bold">MS</div>
@@ -468,7 +468,7 @@ Vendor Independence Works at Operational Scale
 
 - Multi-cloud across AWS, Azure, and Google Cloud
 - Cloud-agnostic management layers
-- Improved resilience and cost optimization
+- Improved resilience and <T4L>cost optimization</T4L>
 
 </div>
 
